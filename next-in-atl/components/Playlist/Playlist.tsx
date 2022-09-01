@@ -3,7 +3,7 @@ import {ISongInfo, Song} from "../Song/Song"
 import styles from "./Playlist.module.scss";
 const songList =[
     {
-        imageLink:"./assets/h.jfif",
+        imageLink:"./assets/h.jpg",
         title: "Haunted",
         album:"Laura Les",
         duration: "1:42"
@@ -15,7 +15,7 @@ const songList =[
         duration: "3:27"
     },
     {
-    imageLink:"./assets/body.jfif",
+    imageLink:"./assets/body.jpg",
     title: "Body",
     album:"Rosenfeld",
     duration: "2:27"
@@ -45,8 +45,13 @@ return (
 </span>
     </div>
     <div id="songs-wrapper" className={styles["songs"]}> 
-    <Song index={1} songInfo={songList[0]} /> 
-    
+    {/* <Song index={1} songInfo={songList[0]} />  */}
+    {songList.map(function(details,index)
+    {
+        return <Song index={index + 1} songInfo={details} />
+
+    })
+    }
     </div>
 </div>
 );

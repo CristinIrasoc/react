@@ -22,7 +22,7 @@ export const Song = (props: IProps) =>{
         <span className={styles["song-nr"]}>
             {index}
         </span>
-        <img src="./assets/h.jfif" className={styles["song-cover"]}>
+        <img src={songInfo.imageLink} className={styles["song-cover"]}>
            </img>
         <span className={styles["song-title"]}>
            {songInfo.title}
