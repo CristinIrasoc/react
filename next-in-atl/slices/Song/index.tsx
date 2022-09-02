@@ -6,7 +6,7 @@ interface IRichText{
   text:string;
   spans:string;
 }
-interface IPrimary{
+export interface IPrimary{
   title: string;
   artist: string;
   cover: IImage;
@@ -25,7 +25,7 @@ interface IImage{
   url: string;
   
 }
-interface IProps {
+ export interface IProps {
   slice:{primary:IPrimary};
 }
 
